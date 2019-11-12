@@ -120,4 +120,4 @@ echo $STRING12
     
     read -p "Press any key to continue... " -n1 -s
     defense-cli startmasternode local false
-    defense-cli masternodestatus
+    defense-cli masternode status

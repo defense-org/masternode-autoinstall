@@ -141,4 +141,4 @@ sleep 5m
 
 read -p "Press any key to continue... " -n1 -s
 defense-cli startmasternode local false
-defense-cli getmasternodestatus
+defense-cli getmasternode status
