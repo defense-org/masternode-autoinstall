@@ -36,6 +36,17 @@ echo $STRING1
     sudo apt-get -y upgrade
     sudo apt-get -y autoremove
     sudo apt-get install wget nano htop -y
+    sudo apt install git -y
+    sudo apt-get install build-essential libtool bsdmainutils autotools-dev autoconf pkg-config -y 
+    sudo apt-get install libssl-dev libgmp-dev libevent-dev libboost-all-dev -y
+    sudo apt-get install software-properties-common -y
+    sudo add-apt-repository ppa:bitcoin/bitcoin -y
+    sudo apt-get update -y
+    sudo apt-get install libssl1.0-dev -y
+    sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
+    sudo apt-get install libminiupnpc-dev -y
+    sudo apt-get install libzmq3-dev -y
+    sudo apt-get install libboost-chrono1.65.1 libboost1.65-dev -y
     clear
 echo $STRING5
     sudo apt-get -y install aptitude
