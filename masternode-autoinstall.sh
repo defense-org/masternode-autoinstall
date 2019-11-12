@@ -41,7 +41,6 @@ echo $STRING1
     sudo apt-get install libssl-dev libgmp-dev libevent-dev libboost-all-dev -y
     sudo apt-get install software-properties-common -y
     sudo add-apt-repository ppa:bitcoin/bitcoin -y
-    sudo apt-get update -y
     sudo apt-get install libssl1.0-dev -y
     sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
     sudo apt-get install libminiupnpc-dev -y
