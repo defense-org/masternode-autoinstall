@@ -16,7 +16,7 @@ Funding your Masternode
 
         Once all addresses are created send 50000 DFNX each to them. Ensure that you send exactly 50000 DFNX and do it in a single transaction. You can double check where the coins are coming from by checking it via coin control usually, that's not an issue.
 
-    As soon as all 2.5K transactions are done, we will wait for 6 confirmations. You can check this in your wallet or use the explorer. It should take around 6 minutes if all transaction have 6 confirmations
+    As soon as all 50000 transactions are done, we will wait for 6 confirmations. You can check this in your wallet or use the explorer. It should take around 6 minutes if all transaction have 6 confirmations
 
 Installation & Setting up your Server
 
