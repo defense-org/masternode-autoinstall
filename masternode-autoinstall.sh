@@ -20,8 +20,7 @@ echo $STRING1
 
     read -e -p "Server IP Address : " ip
     read -e -p "Masternode Private Key (e.g. 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg # THE KEY YOU GENERATED EARLIER) : " key
-    read -e -p "Install Fail2ban? [Y/n] : " install_fail2ban
-    read -e -p "Install UFW and configure ports? [Y/n] : " UFW
+  
 
     clear
  echo $STRING2
@@ -46,44 +45,13 @@ echo $STRING1
     sudo apt-get install libminiupnpc-dev -y
     sudo apt-get install libzmq3-dev -y
     sudo apt-get install libboost-chrono1.65.1 libboost1.65-dev -y
-    clear
-echo $STRING5
     sudo apt-get -y install aptitude
-
-#Generating Random Passwords
-    password=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
-    password2=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
-
-echo $STRING6
-    if [[ ("$install_fail2ban" == "y" || "$install_fail2ban" == "Y" || "$install_fail2ban" == "") ]]; then
-    cd ~
-    sudo aptitude -y install fail2ban
-    sudo service fail2ban restart 
-    fi
-    if [[ ("$UFW" == "y" || "$UFW" == "Y" || "$UFW" == "") ]]; then
-    sudo apt-get install ufw
-    sudo ufw default deny incoming
-    sudo ufw default allow outgoing
-    sudo ufw allow ssh
-    sudo ufw allow 16425/tcp
-    sudo ufw enable -y
-    fi
 
 #Install defense Daemon
     wget https://github.com/defense-org/defense-core/releases/download/v1.0/defense_ubuntu.tar.gz
     sudo tar -xzvf defense_ubuntu.tar.gz
     sudo rm defense-1.2.0-x86_64-linux-gnu.tar.gz
-    defensed -daemon
-    clear
-    
-#Setting up coin
-    clear
-echo $STRING2
-echo $STRING13
-echo $STRING3
-echo $STRING13
-echo $STRING4
-sleep 10
+
 
 #Create defense.conf
 echo '
@@ -130,4 +98,4 @@ echo $STRING12
     
     read -p "Press any key to continue... " -n1 -s
     defense-cli startmasternode local false
-    defense-cli masternode status
+    bash defense-cli masternode status
