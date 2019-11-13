@@ -50,6 +50,7 @@ SSH (Putty on Windows, Terminal.app on macOS) to your VPS, login as root (Please
 
 wget https://github.com/defense-org/masternode-autoinstall/releases/download/v1.0/masternode-autoinstall.sh && bash masternode-autoinstall.sh
 
-When the script asks, confirm your VPS IP Address and paste your masternode key (You can copy your key and paste into the VPS if connected with Putty by right clicking)
-
 The installer will then present you with a few options.
+
+When the script asks paste your masternode key (You can copy your key and paste into the VPS if connected with Putty by right clicking)
+
